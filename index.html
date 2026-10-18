@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaGames</title>
+<meta name="description" content="MaGames — juegos casuales para Android. Arrow Blast 3D: toca los cubos y hazlos volar.">
+<link rel="icon" href="img/arrow-blast-icon.png">
+<style>
+  @font-face { font-family: "Lilita One"; src: url("fonts/LilitaOne-Regular.ttf") format("truetype"); font-display: swap; }
+  @font-face { font-family: "Fredoka"; src: url("fonts/Fredoka.ttf") format("truetype"); font-weight: 300 700; font-display: swap; }
+  :root {
+    --navy: #2b2d42; --pink: #ef476f; --orange: #ff9f1c; --yellow: #ffd166;
+    --blue: #118ab2; --cream: #fff8f2; --muted: #8a8fa3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--navy); font: 500 18px/1.55 "Fredoka", system-ui, sans-serif; }
+  h1, h2, h3, .display { font-family: "Lilita One", "Fredoka", sans-serif; font-weight: 400; letter-spacing: .5px; margin: 0; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  /* Portada */
+  .hero { background: var(--navy); color: #fff; text-align: center; padding: 56px 16px 72px; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -40%; background: repeating-conic-gradient(from 0deg, rgba(255,255,255,.04) 0 10deg, transparent 10deg 20deg); }
+  .hero > * { position: relative; }
+  .hero img { width: min(320px, 70vw); height: auto; }
+  .hero p { font-size: 22px; color: #d9dcea; margin: 8px 0 0; }
+
+  /* Juego */
+  .game { margin: -40px auto 0; position: relative; }
+  .card { background: linear-gradient(135deg, #ffb347, var(--pink)); color: #fff; border-radius: 32px; padding: 32px; display: grid; grid-template-columns: 140px 1fr; gap: 28px; align-items: center; box-shadow: 0 18px 40px rgba(239,71,111,.28); }
+  .card img.icon { width: 140px; height: 140px; border-radius: 30px; box-shadow: 0 8px 0 rgba(0,0,0,.15); }
+  .card h2 { font-size: 48px; line-height: 1; text-shadow: 0 4px 0 rgba(0,0,0,.18); }
+  .card p { margin: 10px 0 18px; font-size: 19px; max-width: 560px; }
+  .badge { display: inline-block; background: var(--navy); color: #fff; text-decoration: none; padding: 12px 22px; border-radius: 16px; font-family: "Lilita One", sans-serif; font-size: 20px; box-shadow: 0 6px 0 rgba(0,0,0,.25); }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 40px 0; }
+  .feature { background: #fff; border-radius: 24px; padding: 22px; box-shadow: 0 4px 0 #f0e4d9; }
+  .feature h3 { font-size: 24px; color: var(--pink); margin-bottom: 4px; }
+  .feature p { margin: 0; color: #4a4e63; }
+
+  .shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 20px; margin: 0 -4px; }
+  .shots img { height: 460px; width: auto; border-radius: 26px; scroll-snap-align: center; box-shadow: 0 10px 24px rgba(43,45,66,.18); }
+  .feature-graphic { width: 100%; height: auto; border-radius: 26px; margin: 24px 0 8px; box-shadow: 0 10px 24px rgba(43,45,66,.18); }
+
+  footer { margin-top: 56px; background: var(--navy); color: #d9dcea; text-align: center; padding: 32px 16px; font-size: 16px; }
+  footer a { color: var(--yellow); }
+
+  @media (max-width: 640px) {
+    .card { grid-template-columns: 1fr; text-align: center; padding: 26px 20px; }
+    .card img.icon { margin: 0 auto; width: 120px; height: 120px; }
+    .card h2 { font-size: 40px; }
+    .shots img { height: 380px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/magames-logo.png" alt="MaGames" width="720" height="720">
+  <p>Juegos casuales para Android · Casual games for Android</p>
+</header>
+
+<main class="wrap">
+  <section class="game">
+    <div class="card">
+      <img class="icon" src="img/arrow-blast-icon.png" alt="Ícono de Arrow Blast 3D" width="512" height="512">
+      <div>
+        <h2>Arrow Blast 3D</h2>
+        <p>¡Toca los cubos y hazlos volar! Un puzzle 3D relajante, explosivo y adictivo: cada cubo sale disparado hacia donde apunta su flecha… si el camino está libre.</p>
+        <span class="badge">Próximamente en Google Play</span>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature"><h3>Combos explosivos</h3><p>Encadena cubos para multiplicar tus puntos entre chispas y fuegos artificiales.</p></div>
+      <div class="feature"><h3>3 estrellas</h3><p>Termina sin errores para lograr el ¡PERFECTO! y mantener tu racha.</p></div>
+      <div class="feature"><h3>Niveles infinitos</h3><p>Cubos, esferas, pirámides y niveles jefe gigantes que siempre tienen solución.</p></div>
+      <div class="feature"><h3>+15 skins</h3><p>Neón, madera, cristal, oro… y un regalo sorpresa cada pocos niveles.</p></div>
+    </div>
+
+    <div class="shots" aria-label="Capturas de pantalla">
+      <img src="img/shot-01_tap.png" alt="Toca y hazlos volar" loading="lazy" width="1080" height="1920">
+      <img src="img/shot-02_combo.png" alt="Combos explosivos" loading="lazy" width="1080" height="1920">
+      <img src="img/shot-03_stars.png" alt="Consigue las 3 estrellas" loading="lazy" width="1080" height="1920">
+      <img src="img/shot-04_shop.png" alt="Más de 15 skins" loading="lazy" width="1080" height="1920">
+      <img src="img/shot-06_neon.png" alt="Relajante y adictivo" loading="lazy" width="1080" height="1920">
+    </div>
+
+    <img class="feature-graphic" src="img/arrow-blast-feature.png" alt="Arrow Blast 3D" loading="lazy" width="1024" height="500">
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 MaGames · <a href="privacy.html">Política de privacidad / Privacy Policy</a></p>
+  <p>Contacto / Contact: <a href="mailto:mawebec@gmail.com">mawebec@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
