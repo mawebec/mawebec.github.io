@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="336" viewBox="0 0 320 336">
+  <!-- Emblema de MaGames: cubo isométrico exacto. La "M" y la flecha se dibujan
+       planas (cuadrado unitario) y se proyectan sobre cada cara con una matriz. -->
+  <defs>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="1" stop-color="#ffc94a"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f45b7e"/>
+      <stop offset="1" stop-color="#d93a60"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#159bc5"/>
+      <stop offset="1" stop-color="#0d7598"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sombra en el piso -->
+  <ellipse cx="160" cy="322" rx="104" ry="11" fill="#000" opacity="0.22"/>
+
+  <!-- Caras -->
+  <polygon points="160,24 284,96 160,168 36,96" fill="url(#top)"/>
+  <polygon points="36,96 160,168 160,312 36,240" fill="url(#left)"/>
+  <polygon points="160,168 284,96 284,240 160,312" fill="url(#right)"/>
+
+  <!-- Brillo en la cara superior -->
+  <polygon points="160,40 252,93 236,102 160,58 84,102 68,93" fill="#ffffff" opacity="0.28"/>
+
+  <!-- "M" sobre la cara izquierda -->
+  <path transform="matrix(124 72 0 144 36 96)" fill="#ffffff"
+        d="M0.2 0.8 L0.2 0.22 L0.35 0.22 L0.5 0.46 L0.65 0.22 L0.8 0.22 L0.8 0.8 L0.65 0.8 L0.65 0.47 L0.5 0.7 L0.35 0.47 L0.35 0.8 Z"/>
+
+  <!-- Flecha sobre la cara derecha -->
+  <path transform="matrix(124 -72 0 144 160 168)" fill="#ffffff"
+        d="M0.16 0.42 L0.52 0.42 L0.52 0.27 L0.84 0.5 L0.52 0.73 L0.52 0.58 L0.16 0.58 Z"/>
+
+  <!-- Contorno exterior y aristas internas -->
+  <g fill="none" stroke="#2b2d42" stroke-linejoin="round" stroke-linecap="round">
+    <polygon points="160,24 284,96 284,240 160,312 36,240 36,96" stroke-width="12"/>
+    <polyline points="36,96 160,168 284,96" stroke-width="10"/>
+    <line x1="160" y1="168" x2="160" y2="312" stroke-width="10"/>
+  </g>
+</svg>
