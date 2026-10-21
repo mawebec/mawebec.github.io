@@ -1,2 +1,1 @@
-# Completar cuando tengamos la cuenta de AdMob, con la línea que da AdMob:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-7949374333285641, DIRECT, f08c47fec0942fa0
